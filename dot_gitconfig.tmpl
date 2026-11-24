@@ -1,0 +1,36 @@
+[user]
+        email = safiyat@voereir.com
+        name = Md Safiyat Reza
+        signingkey = 858AD7317E768E70
+[core]
+        filemode = true
+        ignorecase = false
+[push]
+        default = simple
+        autoSetupRemote = true
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        required = true
+        process = git-lfs filter-process
+[color]
+        ui = always
+        # ui = never
+        status = always
+[gpg]
+        program = gpg
+[commit]
+        gpgSign = true
+[format]
+        signOff = true
+[pull]
+        ff = only
+
+[includeIf "gitdir:/Users/safiyat/GitHub/*/.git"]
+        path = /Users/safiyat/GitHub/.personal-gitconfig
+[init]
+        defaultBranch = main
+[diff]
+        algorithm = patience
+        word-diff = color
+        word-diff-regex = .

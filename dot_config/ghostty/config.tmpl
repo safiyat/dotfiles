@@ -1,0 +1,30 @@
+# --- Shared Settings (macOS & Ubuntu) ---
+theme = Catppuccin Mocha
+font-family = JetBrains Mono
+font-thicken = true
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration = detect
+
+scrollback-limit = 10000
+copy-on-select = clipboard
+confirm-close-surface = false
+
+# --- OS-Specific Overrides ---
+{{- if eq .chezmoi.os "darwin" }}
+font-size = 14
+macos-titlebar-style = transparent
+macos-option-as-alt = true
+window-padding-x = 10
+window-padding-y = 8
+{{- else if eq .chezmoi.os "linux" }}
+font-size = 11
+window-decoration = true
+gtk-single-instance = true
+window-padding-x = 6
+window-padding-y = 6
+{{- end }}
+
+# Optional machine-local untracked overrides (e.g., per-monitor tweaks)
+config-file = ?local
