@@ -1,0 +1,8 @@
+# Ignore private SSH/GPG keys
+id_*
+!*.pub
+*.pem
+*.key
+
+# macOS
+.DS_Store
